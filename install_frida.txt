@@ -1,0 +1,8 @@
+1、安裝python， 可以下載python 如python3.5 ，它會自動把python環境添加到你的環境變量中
+2、安裝pip，可以按照https://www.runoob.com/w3cnote/python-pip-install-usage.html 安裝pip
+3、 pip install frida-tools，基本到這一步pc端就搞定了(即frida-core等已經安裝完畢)
+4，用frida version看看你裝的frida 版本，到這裏https://github.com/frida/frida/releases下載和你版本一致的適合你手機的arm版本的frida-server
+5，把這個arm版的frida-server，push到你手機的/data/local/tmp下
+6、設置755權限，就可以運行了，然後adb tcp forward 兩個frida端口（adb forward tcp:27042 tcp:27042
+adb forward tcp:27043 tcp:27043）
+7、這樣你的pc就可以鏈接你的frida設備了
